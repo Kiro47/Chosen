@@ -54,7 +54,7 @@ public class SimpleTrading extends JavaPlugin{
 		
 		factory = new TradeFactory(this, messageConfig, config, econ, controlManager);
 		
-		getCommand("trade").setExecutor(new CommandTrade(this));
+		getCommand("tra").setExecutor(new CommandTrade(this));
 		movementTask = getServer().getScheduler().runTaskTimer(this, new MoveCheckerRunnable(factory, config), 20L, 30L);
 		
 		try {
