@@ -13,7 +13,7 @@ global:
   # The maximum distance where players are able to initiate a trade
   max-distance: 15
   # Specifies wether trading in creative mode is enabled or not
-  creative-trading: true
+  creative-trading: false
   # Specifies the timeout for trading requests in seconds
   timeout: 60
   # Specifies wether to use xp trading or not

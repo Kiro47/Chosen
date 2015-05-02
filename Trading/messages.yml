@@ -2,7 +2,7 @@
 trade-request: "&6You have requested a trade with @p"
 
 # Message sent to the person being requested to trade
-requested-message: "&6@p wants to trade with you.\nUse /trade accept or Shift+Right-Click them to accept!"
+requested-message: "&6@p wants to trade with you.\nUse /tra accept or Shift+Right-Click them to accept!"
 
 # Message if your partner is already in a trade
 is-involved: "&6@p is already involved in another trade"

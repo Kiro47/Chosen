@@ -28,7 +28,7 @@ private SimpleTrading main;
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if (!cmd.getName().equalsIgnoreCase("trade")) {
+		if (!cmd.getName().equalsIgnoreCase("tra")) {
 			// This command doesn't belong to us
 			return true;
 		}
@@ -43,7 +43,7 @@ private SimpleTrading main;
 		MessageConfiguration messageConfig = main.getMessageConfiguration();
 		
 		if (args.length < 1) {
-			player.sendMessage(ChatColor.RED + "Usage: /trade <player>");
+			player.sendMessage(ChatColor.RED + "Usage: /tra <player>");
 			return true;
 		}
 		
