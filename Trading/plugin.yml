@@ -1,0 +1,10 @@
+name: SimpleTrades
+version: 2.0
+main: com.kiro.trading.SimpleTrading
+author: Kiro
+description: Trading plugin based on Matzefratze's
+
+commands:
+  trade:
+    usage: /<command>
+    description: Basic Trading

@@ -1,0 +1,40 @@
+blocks:
+  # Block to accept trade
+  accept: 'ink_sack:10'
+  # Block to decline trade
+  decline: 'ink_sack:1'
+  # Block to seperate inventories
+  seperator: 'iron_fence'
+inventory:
+  # Specifies the inventory-gui name while trading
+  # Note: Use @p as a placeholder for the playername
+  name: 'SimpleTrading - @p'
+global:
+  # The maximum distance where players are able to initiate a trade
+  max-distance: 15
+  # Specifies wether trading in creative mode is enabled or not
+  creative-trading: true
+  # Specifies the timeout for trading requests in seconds
+  timeout: 60
+  # Specifies wether to use xp trading or not
+  use-xp-trading: true
+item-control:
+  # The control mode the plugin is running
+  # Available modes: blacklist, whitelist
+  # Explanation:
+  #   blacklist: All items can be traded except the
+  #              items configured to not be.
+  #   whitelist: No items can be traded except the
+  #              items configured to be.
+  control-mode: blacklist
+  
+  # A list of items that cannot be traded or can be traded
+  # depending on your control-mode setting
+  item-list:
+  - 'cake'
+  
+  # A list of lores (the description text of a item) marking
+  # an item to be untradable or tradeable depending on your
+  # control-mode setting
+  item-lore:
+  - '[Untradeable]'
