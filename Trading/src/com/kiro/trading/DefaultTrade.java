@@ -402,6 +402,10 @@ public class DefaultTrade implements Trade{
 			int newExpOffer = tradePlayer.getExpOffer();
 			if (clickType == ClickType.LEFT) {
 				newExpOffer++;
+				if (player.getLevel() < 20) {
+					player.sendMessage(ChatColor.RED + "You are too weak to trade your Experience! ");
+					return;
+				}
 				
 				if (newExpOffer > player.getLevel()) {
 					// Too few exp
