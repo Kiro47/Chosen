@@ -9,6 +9,12 @@ inventory:
   # Specifies the inventory-gui name while trading
   # Note: Use @p as a placeholder for the playername
   name: 'SimpleTrading - @p'
+  # Offer For the First Golden Nugget
+  Money-Offer-1: 1
+  # Offer for the second golden nugget
+  Money-Offer-2: 10
+  # Offer for the third golden nugget
+  Money-Offer-3: 100
 global:
   # The maximum distance where players are able to initiate a trade
   max-distance: 15

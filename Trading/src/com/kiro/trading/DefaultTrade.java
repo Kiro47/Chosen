@@ -62,6 +62,8 @@ public class DefaultTrade implements Trade{
 	private final Economy econ;
 	private final ItemControlManager controlManager;
 	
+	
+	
 	private StateChangedListener listener;
 	private TradeState state;
 	
@@ -75,6 +77,8 @@ public class DefaultTrade implements Trade{
 		this.econ = econ;
 		this.controlManager = controlManager;
 		this.state = TradeState.REQUESTED;
+		
+		
 	}
 	
 	public TradePlayer getInitiator() {
@@ -190,21 +194,24 @@ public class DefaultTrade implements Trade{
 			addMoneyLore.add(ChatColor.GRAY + "Left-Click to add money");
 			addMoneyLore.add(ChatColor.GRAY + "Right-Click to remove money");
 			
+			int nug1 = config.nug1();
+			int nug2 = config.nug2();
+			int nug3 = config.nug3();
 			add10ItemStack = MONEY_MATERIAL_DATA.toItemStack(1);
 			ItemMeta meta10 = add10ItemStack.getItemMeta();
-			meta10.setDisplayName(ChatColor.WHITE + "Add/Remove " + econ.format(10));
+			meta10.setDisplayName(ChatColor.WHITE + "Add/Remove " + econ.format(nug1));
 			meta10.setLore(addMoneyLore);
 			add10ItemStack.setItemMeta(meta10);
 			
 			add100ItemStack = MONEY_MATERIAL_DATA.toItemStack(1);
 			ItemMeta meta100 = add100ItemStack.getItemMeta();
-			meta100.setDisplayName(ChatColor.WHITE + "Add/Remove " + econ.format(100));
+			meta100.setDisplayName(ChatColor.WHITE + "Add/Remove " + econ.format(nug2));
 			meta100.setLore(addMoneyLore);
 			add100ItemStack.setItemMeta(meta100);
 			
 			add1000ItemStack = MONEY_MATERIAL_DATA.toItemStack(1);
 			ItemMeta meta1000 = add1000ItemStack.getItemMeta();
-			meta1000.setDisplayName(ChatColor.WHITE + "Add/Remove " + econ.format(1000));
+			meta1000.setDisplayName(ChatColor.WHITE + "Add/Remove " + econ.format(nug3));
 			meta1000.setLore(addMoneyLore);
 			add1000ItemStack.setItemMeta(meta1000);
 		}
@@ -353,14 +360,18 @@ public class DefaultTrade implements Trade{
 		if (isPlayerInventory) {
 			action = TradeAction.MOVE_ITEM_TO_TRADE_INVENTORY;
 		} else {
+			int nug1 = config.nug1();
+			int nug2 = config.nug2();
+			int nug3 = config.nug3();
+			
 			if (slot == ADD_10_INDEX) {
-				moneyAdding = 10;
+				moneyAdding = nug1;
 				action = TradeAction.ADD_MONEY;
 			} else if (slot == ADD_100_INDEX) {
-				moneyAdding = 100;
+				moneyAdding = nug2;
 				action = TradeAction.ADD_MONEY;
 			} else if (slot == ADD_1000_INDEX) {
-				moneyAdding = 1000;
+				moneyAdding = nug3;
 				action = TradeAction.ADD_MONEY;
 			} else if (slot == ADD_EXP_LEVEL_INDEX && config.usesXpTrading()) {
 				action = TradeAction.ADD_EXP;
