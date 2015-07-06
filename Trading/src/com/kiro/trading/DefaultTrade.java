@@ -334,7 +334,13 @@ public class DefaultTrade implements Trade{
 		}
 		if (event.getClickedInventory() == null) return;
 		
-		
+		if (event.getInventory().getItem(event.getSlot())  == null) return;
+		if (event.getClickedInventory().getItem(event.getSlot()) == null) return;
+		/// 
+		///
+		///	Find way to return on a null slot clicked
+		///
+		///
 		InventoryView view = event.getView();
 		Inventory inventory = null;
 		int rawSlot = event.getRawSlot();
@@ -388,6 +394,7 @@ public class DefaultTrade implements Trade{
 				
 		//Process the calculated data
 		switch (action) {
+		
 		case ACCEPT:
 			tradePlayer.setAccepted(true);
 			
